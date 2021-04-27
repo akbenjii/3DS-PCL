@@ -322,7 +322,6 @@ int main(int argc, char **argv) {
     while (aptMainLoop()) {
         bool hasMessage = false;
         bool hasRoomID = false;
-        int xHeld = 0;
         hidScanInput();
 
         if (enableNoBlock) {
@@ -334,7 +333,6 @@ int main(int argc, char **argv) {
         }
 
         u32 kDown = hidKeysDown();
-        u32 kHeld = hidKeysHeld();
 
         if (kDown & KEY_START)
             break;
